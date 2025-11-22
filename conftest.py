@@ -13,6 +13,7 @@ def browser():
     from selenium.webdriver.chrome.service import Service
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
+    driver.get("https://parabank.parasoft.com/parabank/index.htm")
     driver.maximize_window()
     yield driver
     driver.quit()
@@ -34,7 +35,7 @@ def pytest_configure(config):
     # Metadata
     metadata = getattr(config, '_metadata', {})
     metadata["Project Name"] = "Pytest Selenium BDD"
-    metadata["Test Environment"] = "QA"
+    metadata["Test Environment"] = "PROD"
     metadata["Browser"] = "Chrome"
     metadata["Executed By"] = os.getenv("USERNAME") or os.getenv("USER", "Unknown")
 

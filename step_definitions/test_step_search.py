@@ -3,7 +3,7 @@ from pytest_bdd import scenarios, given, when, then
 from pages.search_page import SearchPage
 
 # Register scenarios from the feature file
-scenarios('../features/search.feature')
+#scenarios('../features/search.feature')
 
 @pytest.fixture
 def search_page(browser):

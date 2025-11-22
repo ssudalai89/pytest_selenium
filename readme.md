@@ -59,6 +59,10 @@ Your terminal should now show `(venv)` prefix.
 
 ---
 
+For the first time, after installing all the required packages we need to create the requirements.txt file using the below command
+
+pip freeze > requirements.txt
+
 ## 📋 5. Install Required Packages
 
 Install all dependencies:
